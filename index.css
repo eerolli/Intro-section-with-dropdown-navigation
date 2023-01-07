@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-height: 100vh;    
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "navigation navigation"
+    "left right"
+    ;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    
+}
+
+.navigation{
+    grid-area: navigation;
+    display: flex;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+    padding: 2rem;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}

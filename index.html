@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
@@ -15,25 +16,43 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <nav class="navigation">
+      <img src="./images/logo.svg" alt="logo">
+      <ul class="nav-left">
+        <li>Features <img src="./images/icon-arrow-down.svg" alt="arrow down" class="arrow"> <img src="./images/icon-arrow-up.svg" alt="arrow up" class="arrow hidden"></li>
+        <li>Company <img src="./images/icon-arrow-down.svg" alt="arrow down" class="arrow"> <img src="./images/icon-arrow-up.svg" alt="arrow up" class="arrow hidden"></li>
+        <li>Careers</li>
+        <li>About</li>     
+      </ul>
+      <ul class="nav-right">
+        <li>Login</li>
+        <li>Register</li>
+      </ul>      
+    </nav>
+      
+    <div class="left">
+      <h1 class="headline">Make remote work</h1>
 
-  Features
-  Company
-  Careers
-  About
+      <p class="text">Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
 
-  Login
-  Register
+      <button class="more">Learn more</button>
+      <div class="client">
+        <img src="./images/client-databiz.svg" alt="databiz" class="client">
+        <img src="./images/client-audiophile.svg" alt="audiophile" class="client">
+        <img src="./images/client-meet.svg" alt="meet" class="client">
+        <img src="./images/client-maker.svg" alt="maker" class="client">
+      </div>
+    </div>
+    <div class="right">
+      <img src="./images/image-hero-desktop.png" alt="hero image" class="hero-image">
+    </div>
+  </div>
 
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/eerolli">Eero Liuska</a>.
   </div>
 </body>
 </html>
