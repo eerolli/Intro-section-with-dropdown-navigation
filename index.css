@@ -1,39 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);  
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    max-height: 100vh;    
+html, body{
+    height: 100%;
+    font-family: 'Epiloque', sans-serif;
 }
 
 .container {
+    height: 100%;
     display: grid;
-    grid-template-areas: 
-    "navigation navigation"
-    "left right"
-    ;
-    grid-template-columns: auto auto;
-    gap: 1rem;
-    
-}
-
-.navigation{
-    grid-area: navigation;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr repeat(2, 1.5fr) 0.5fr;
+    gap: 0 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav nav"
+      "hero hero hero"
+      "content content content"
+      "clients clients clients";
+  }
+  
+.nav { 
+    grid-area: nav;
     display: flex;
+    align-items: center;
+}
+  
+.hero { 
+    grid-area: hero;
+    background-image: url(./images/image-hero-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+  
+.content { 
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+  
+.clients { 
+    grid-area: clients;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.left {
-    grid-area: left;
+.client{
+    width: 3rem;
+    height: 1.5rem;
 }
 
-.right {
-    grid-area: right;
-    padding: 2rem;
+.headline{
+    font-weight: 700;
 }
 
-.hero-image {
-    max-width: 100%;
-    height: auto;
+.text{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--medium-gray);
+    width: 90%;
+    line-height: 1.6;
 }
