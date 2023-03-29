@@ -48,16 +48,37 @@ html, body{
     color: var(--medium-gray);
 }
 
-.nav-item-arrow{
+.features, .company{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100px;
 }
 
-.arrow{
+.sub-menu-one, .sub-menu-two{
+    display: none;
+}
+
+.sub-menu-one.active, .sub-menu-two.active{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sub-menu-item{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.arrow-one, .arrow-two{
     height: 8px;
     width: auto;
+}
+
+.arrow-one.active, .arrow-two.active{
+    transform: rotate(180deg);
 }
 
 .mobile-menu.active{
