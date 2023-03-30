@@ -15,6 +15,7 @@
 
 html, body{
     height: 100%;
+    background-color: var(--almost-white);
 }
 
 .container {
@@ -36,7 +37,6 @@ html, body{
     grid-area: nav;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .nav-menu{
@@ -52,7 +52,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100px;
+    width: 90px;
 }
 
 .sub-menu-one, .sub-menu-two{
@@ -105,9 +105,9 @@ html, body{
     gap: 5px;
 }
 
-.login-btn, .register-btn{
+.login-btn, .register-btn, .learn-btn{
     padding: 8px 15px;
-    width: 150px;
+    width: 100px;
     background-color: var(--almost-white);
     font-family: inherit;
     font-weight: 700;
@@ -118,13 +118,21 @@ html, body{
     border: none;
 }
 
-.register-btn{
+.register-btn, .learn-btn{
     border: 1.5px solid var(--medium-gray);
     border-radius: 0.5rem;
 }
 
+.learn-btn{
+    width: 150px;
+}
+
+.register-btn:hover, .learn-btn:hover {
+    border-color: var(--almost-black);
+}
+
 #logo{
-    margin-left: 5px;
+    margin-left: 2rem;
 }
 
 .nav-item{
@@ -141,6 +149,7 @@ html, body{
     cursor: pointer;
     margin-right: 5px;
     transition: 0.5s ease-in-out;
+    margin-left: auto;
 }
 
 .hamburger.active .bar:nth-child(2){
@@ -153,12 +162,6 @@ html, body{
 
 .hamburger.active .bar:nth-child(3){
     transform: translateY(-5px) rotate(-45deg);
-}
-
-@media(min-width:769px) {
-    .hamburger{
-        display: none;
-    }
 }
 
 .bar{
@@ -199,6 +202,8 @@ html, body{
 
 .headline{
     font-weight: 700;
+    font-size: 4.5vw;
+    text-align: left;
 }
 
 .text{
@@ -207,4 +212,100 @@ html, body{
     color: var(--medium-gray);
     width: 90%;
     line-height: 1.6;
+    text-align: left;
+}
+
+li:hover, .login-btn:hover, .register-btn:hover, .learn-btn:hover{
+    cursor: pointer;
+    color: var(--almost-black);
+}
+
+@media(min-width:791px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.5fr repeat(2, 1.5fr) 0.5fr;
+        grid-template-areas: 
+        "nav nav"
+        "content hero"
+        "content hero"
+        "clients hero"
+        ;
+    }
+
+    .hero{
+        background-image: url(./images/image-hero-desktop.png);
+    }
+
+    .hamburger{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 3rem;
+    }
+    .nav-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-items{
+        display: flex;
+        gap: 2rem;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        position: fixed;
+        right: 2rem;
+    }
+
+    .dt-features, .dt-company{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90px;
+    }
+    
+    .dt-sub-menu-one, .dt-sub-menu-two{
+        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: left;
+    }
+
+    .dt-sub-menu-one{
+        left: 10rem;
+    }
+    
+    .dt-sub-menu-one.active, .dt-sub-menu-two.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-menu-item{
+        margin-top: 15px;
+    }
+    .dt-arrow-one, .dt-arrow-two{
+        height: 8px;
+        width: auto;
+    }
+    
+    .dt-arrow-one.active, .dt-arrow-two.active{
+        transform: rotate(180deg);
+    }
+
+    .text, .headline{
+        width: 25rem;
+    }
+
+    .clients{
+        justify-content: center;
+        gap: 3rem;
+    }
 }
