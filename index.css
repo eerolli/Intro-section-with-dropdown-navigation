@@ -125,6 +125,14 @@ html, body{
 
 .learn-btn{
     width: 150px;
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    padding: 12px 10px;
+}
+
+.learn-btn:hover{
+    background-color: var(--almost-white);
+    color: var(--almost-black);
 }
 
 .register-btn:hover, .learn-btn:hover {
